@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker and Kubernetes Commands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Docker and Kubernetes Commands</h1>
+        <nav>
+            <ul>
+                <li><a href="#docker">Docker Commands</a></li>
+                <li><a href="#kubernetes">Kubernetes Commands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="docker">
+            <h2>Docker Commands</h2>
+            <article>
+                <h3>Getting Started</h3>
+                <pre><code>$ docker --version</code></pre>
+                <p>Check the installed Docker version.</p>
+                <pre><code>$ docker pull <image_name></code></pre>
+                <p>Pull an image from Docker Hub.</p>
+            </article>
+
+            <article>
+                <h3>Image Management</h3>
+                <pre><code>$ docker images</code></pre>
+                <p>List all Docker images on your system.</p>
+                <pre><code>$ docker rmi <image_id></code></pre>
+                <p>Remove a Docker image.</p>
+                <pre><code>$ docker build -t <tag_name> <path></code></pre>
+                <p>Build a Docker image from a Dockerfile.</p>
+            </article>
+
+            <article>
+                <h3>Container Management</h3>
+                <pre><code>$ docker run -d -p <host_port>:<container_port> <image_name></code></pre>
+                <p>Run a container in detached mode and map ports.</p>
+                <pre><code>$ docker ps</code></pre>
+                <p>List running containers.</p>
+                <pre><code>$ docker stop <container_id></code></pre>
+                <p>Stop a running container.</p>
+                <pre><code>$ docker exec -it <container_id> /bin/bash</code></pre>
+                <p>Access a running container's shell.</p>
+            </article>
+        </section>
+
+        <section id="kubernetes">
+            <h2>Kubernetes Commands</h2>
+            <article>
+                <h3>Getting Started</h3>
+                <pre><code>$ kubectl version</code></pre>
+                <p>Check the installed kubectl version and cluster information.</p>
+                <pre><code>$ kubectl cluster-info</code></pre>
+                <p>Get information about the Kubernetes cluster.</p>
+            </article>
+
+            <article>
+                <h3>Pod Management</h3>
+                <pre><code>$ kubectl get pods</code></pre>
+                <p>List all Pods in the default namespace.</p>
+                <pre><code>$ kubectl describe pod <pod_name></code></pre>
+                <p>Get detailed information about a specific Pod.</p>
+                <pre><code>$ kubectl delete pod <pod_name></code></pre>
+                <p>Delete a Pod.</p>
+            </article>
+
+            <article>
+                <h3>Deployment Management</h3>
+                <pre><code>$ kubectl get deployments</code></pre>
+                <p>List all Deployments in the default namespace.</p>
+                <pre><code>$ kubectl create -f <file_name>.yaml</code></pre>
+                <p>Create resources defined in a YAML file.</p>
+                <pre><code>$ kubectl apply -f <file_name>.yaml</code></pre>
+                <p>Apply changes to resources defined in a YAML file.</p>
+                <pre><code>$ kubectl rollout status deployment/<deployment_name></code></pre>
+                <p>Check the rollout status of a Deployment.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Docker and Kubernetes Commands Reference</p>
+    </footer>
+</body>
+</html>
